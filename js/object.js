@@ -365,24 +365,169 @@
 // console.log(findName(friends));
 
 
+// const user = {
+//   name: "Artem",
+//   age: 13,
+//   city: "Kiyw",
+//   premium: true,
+// }
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const key = Object.keys(user);
+
+// for (const item of key) {
+//   console.log(`Ваш ключ ${item}: ${user[item]}`);
+  
+// }
+
+// console.log(user);
+// console.log(key);
+
+
+
+
+
+// Урок 5
+
+// let a = 5; // Якщо ми передаємо значення однієї змінної в іншу, то в іншій змінні створюється копія цього значення, тобто присвоєння за значенням
+// let b = a;
+// b = 10;
+// console.log(a);
+// console.log(b);
+// console.log(b === a);
+
+// const objA = { // В складних типах данних при передаванні одних значень в іншу передається за посиланням оригінал
+//     x: 1,
+//     y: 2,
+//     z: 3,
+// }
+
+// const objB = objA
+// objB.x = 4;
+// console.log(objA);
+// console.log(objA === objB);
+
+// console.log(objB);
+
+// const c = 5;
+// const d = 5;
+
+// console.log(c === d);
+// const qwe = {};
+// const rty = {};
+// console.log(qwe === rty);
+
+
+// const objA = {
+//     x: 1,
+//     y: 2,
+//     z: 3,
+// }
+
+// const objB = { // Висипали нутро з змінної objA
+//     ...objA,
+//     x: 100000, // Перобили ключ з іншої змінни, бо ключи у одному файлі однакові. Перевизначили ключ на нове значення
+//     d: 100,
+// }
+
+// console.log(objA);
+// console.log(objB);
+
+
+// const arrA = [1, 2, 3, 4, 5];
+
+// const arrB = [...arrA];
+
+// arrB[2] = 4;
+// arrB.push(50);
+
+// arrB.hello = "Hello World!";
+// // arrB[hello] = "World Hello!";
+
+// console.log(arrA);
+// console.log(arrB);
+
+
+// const array = [1, 2, 3, 4, 5];
+
+// const result = Math.min(...array);
+
+// console.log(result);
+
+
+// const objectOne = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+// }
+
+// const objectTwo = {
+//     d: 4,
+//     e: 5,
+//     a: 100,
+// }
+
+// const objectThree = {
+//     f: 6,
+//     g: 7,
+//     b: 200,
+// }
+
+// const objectTogether = {
+//     ...objectOne,
+//     ...objectTwo,
+//     ...objectThree,
+// }
+
+// objectTogether.c = 300;
+// console.log(objectTogether);
+
+
+// Завдання 1
+
+// Напиши скрипт, який, для об'єкта user, послідовно:
+
+// додає поле mood зі значенням 'happy'
+// замінює значення hobby на 'skydiving'
+// замінює значення premium на false
+// виводить вміст об'єкта user в форматі ключ:значення використовуючи Object.keys() і for...of
+
 const user = {
-  name: "Artem",
-  age: 13,
-  city: "Kiyw",
-  premium: true,
+    name: "Anton",
+    age: 13,
+    hobby: "Front-End",
+    premium: true,
 }
 
-user.mood = "happy";
-user.hobby = "skydiving";
+user.mood = 'happy';
+user.hobby = 'skydiving';
 user.premium = false;
 
-const key = Object.keys(user);
+console.log(user);
 
-for (const item of key) {
-  console.log(`Ваш ключ ${item}: ${user[item]}`);
-  
+
+const perebir = Object.keys(user)
+console.log(perebir);
+
+for (const i of perebir) {
+    console.log(`${i}:${user[i]}`);
 }
 
-console.log(user);
-console.log(key);
+// Завдання 2
+
+// Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.
+
+// const countProps = (obj) => {
+//     const result = Object.keys(obj);
+//     const resultTwo = result.length;
+//     return resultTwo
+// }
+
+const countProps = (obj) => Object.keys(obj).length;
+
+
+console.log(countProps(user));
 
